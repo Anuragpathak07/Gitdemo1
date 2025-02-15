@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Bikes - Flask App{% endblock %}
+
+{% block content %}
+  <div class="text-center">
+    <h2>Our Bikes</h2>
+    <p class="lead">Check out our amazing bikes below!</p>
+  </div>
+
+  <div class="row">
+    {% for bike in bikes %}
+      <div class="col-md-4 mb-3">
+        <div class="card shadow-sm h-100">
+          <img src="{{ bike.image }}" class="card-img-top img-fluid fixed-image" alt="{{ bike.name }}">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ bike.name }}</h5>
+            <p class="card-text"><strong>Price:</strong> {{ bike.price }}</p>
+            <p class="card-text"><strong>Type:</strong> {{ bike.type }}</p>
+            <a href="{{ bike.purchase_link }}" target="_blank" class="btn btn-success mt-auto">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

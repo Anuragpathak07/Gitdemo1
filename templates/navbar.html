@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">FLASK</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/" style="font-size: 1.2rem;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{{ url_for('cars_page') }}" style="font-size: 1.2rem;">Cars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{{ url_for('bikes_page') }}" style="font-size: 1.2rem;">Bikes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{{ url_for('contact_page') }}" style="font-size: 1.2rem;">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
